@@ -1,0 +1,66 @@
+{
+  "python.defaultInterpreterPath": "/home/criton/miniconda3/envs/ai-podcast/bin/python",
+  "python.terminal.activateEnvironment": true,
+
+  "editor.formatOnSave": true,
+  "editor.formatOnSaveMode": "file",
+
+  "files.exclude": {
+    "**/__pycache__": true,
+    "**/*.pyc": true,
+    "**/*.pyo": true,
+    "**/*.pyd": true,
+    "**/.pytest_cache": true,
+    "**/.mypy_cache": true,
+    "**/.ruff_cache": true,
+
+    "**/output": true,
+    "**/tmp": true,
+
+    "**/*.mp4": true,
+    "**/*.mkv": true,
+    "**/*.mov": true,
+    "**/*.avi": true,
+    "**/*.wav": true,
+    "**/*.mp3": true
+  },
+
+  "search.exclude": {
+    "**/.git": true,
+    "**/__pycache__": true,
+    "**/.pytest_cache": true,
+    "**/.mypy_cache": true,
+    "**/.ruff_cache": true,
+    "**/output": true,
+    "**/tmp": true,
+
+    "**/*.mp4": true,
+    "**/*.mkv": true,
+    "**/*.mov": true,
+    "**/*.avi": true,
+    "**/*.wav": true,
+    "**/*.mp3": true
+  },
+
+  "[python]": {
+    "editor.defaultFormatter": "charliermarsh.ruff",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll": "explicit",
+      "source.organizeImports": "explicit"
+    }
+  },
+
+  "python.analysis.typeCheckingMode": "basic",
+  "python.analysis.autoImportCompletions": true,
+
+  "python.testing.pytestEnabled": true,
+  "python.testing.unittestEnabled": false,
+  "python.testing.autoTestDiscoverOnSaveEnabled": false,
+
+  "terminal.integrated.scrollback": 10000,
+
+  "terminal.integrated.env.linux": {
+    "SKIP_PROJ_MENU": "1"
+  }
+}

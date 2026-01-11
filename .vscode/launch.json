@@ -1,0 +1,33 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "AI Podcast: run (module)",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "aipodcast.cli",
+      "args": ["run", "--assets", "assets", "--out", "output"],
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}",
+      "justMyCode": true,
+      "env": {
+        "PYTHONUNBUFFERED": "1",
+        "PYTHONPATH": "${workspaceFolder}/src"
+      }
+    },
+    {
+      "name": "AI Podcast: run (file fallback)",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/src/aipodcast/cli.py",
+      "args": ["run", "--assets", "assets", "--out", "output"],
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}",
+      "justMyCode": true,
+      "env": {
+        "PYTHONUNBUFFERED": "1",
+        "PYTHONPATH": "${workspaceFolder}/src"
+      }
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "AI Podcast: env smoke-check",
+      "type": "shell",
+      "command": "bash",
+      "args": [
+        "-lc",
+        "set -e; source /home/criton/miniconda3/etc/profile.d/conda.sh && conda activate ai-podcast && echo \"ENV=$CONDA_DEFAULT_ENV\" && python --version && which python && ruff --version"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "presentation": {
+        "reveal": "always",
+        "focus": true,
+        "panel": "dedicated",
+        "showReuseMessage": false,
+        "clear": true
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "AI Podcast: terminal no env",
+      "type": "shell",
+      "command": "bash",
+      "args": [
+        "-lc",
+        "source /home/criton/miniconda3/etc/profile.d/conda.sh && conda activate ai-podcast && exec bash"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "presentation": {
+        "reveal": "always",
+        "focus": true,
+        "panel": "dedicated",
+        "showReuseMessage": false
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "AI Podcast: ruff (format)",
+      "type": "shell",
+      "command": "bash",
+      "args": [
+        "-lc",
+        "set -e; source /home/criton/miniconda3/etc/profile.d/conda.sh && conda activate ai-podcast && ruff format ."
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "showReuseMessage": false
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "AI Podcast: ruff (check)",
+      "type": "shell",
+      "command": "bash",
+      "args": [
+        "-lc",
+        "set -e; source /home/criton/miniconda3/etc/profile.d/conda.sh && conda activate ai-podcast && ruff check ."
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "showReuseMessage": false
+      },
+      "problemMatcher": []
+    }
+  ]
+}
