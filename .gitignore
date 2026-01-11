@@ -1,13 +1,72 @@
+# ============================================================
+# ai-podcast — .gitignore
+# Objetivo: manter o repositório leve e reproduzível,
+# evitando subir artefatos gerados, caches e arquivos grandes.
+# ============================================================
+
+
+# ------------------------------------------------------------
+# Python: bytecode, caches e artefatos locais de execução
+# (gerados automaticamente pelo interpretador e ferramentas)
+# ------------------------------------------------------------
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
+
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
 
+
+# ------------------------------------------------------------
+# Projeto: outputs e temporários do pipeline
+# (vídeos/clipes intermediários, frames, logs e renders)
+# ------------------------------------------------------------
 output/
 tmp/
 
+
+# ------------------------------------------------------------
+# Modelos / checkpoints
+# (ideal manter fora do repo, ex.: ~/workspace/_shared/models)
+# ------------------------------------------------------------
 models/
 checkpoints/
 
+
+# ------------------------------------------------------------
+# VS Code: logs e arquivos efêmeros
+# (mantemos versionados: settings.json, tasks.json, launch.json)
+# ------------------------------------------------------------
 .vscode/*.log
+
+
+# ------------------------------------------------------------
+# Mídia gerada (grande) — ajuste conforme sua política de assets
+#
+# Recomendação:
+# - NÃO versionar outputs e arquivos finais gerados.
+# - Para "assets de exemplo", prefira criar uma pasta assets/sample/
+#   e versionar somente arquivos pequenos e representativos.
+# ------------------------------------------------------------
+*.mp4
+*.mkv
+*.mov
+*.avi
+
+*.wav
+*.mp3
+*.flac
+
+*.png
+*.jpg
+*.jpeg
+*.webp
+
+
+# ------------------------------------------------------------
+# (Opcional) Sistema / editor / miscellany
+# ------------------------------------------------------------
+.DS_Store
+Thumbs.db
