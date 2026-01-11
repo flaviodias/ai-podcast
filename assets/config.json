@@ -1,0 +1,49 @@
+{
+  "fps": 25,
+
+  "paths": {
+    "assets_dir": "assets",
+    "output_dir": "output",
+
+    "audio_full": "assets/audio_full.wav",
+    "master_scene": "assets/master_scene.jpg",
+
+    "diarization_dir": "output/diarization",
+    "face_map_dir": "output/face_map",
+    "segments_dir": "output/segments",
+    "final_dir": "output/final",
+    "tmp_dir": "output/tmp",
+
+    "static_with_audio": "output/final/static_with_audio.mp4",
+    "final_video": "output/final/podcast.mp4"
+  },
+
+  "speakers": {
+    "Speaker_0": "left_face",
+    "Speaker_1": "right_face"
+  },
+
+  "faces": {
+    "left_face": { "bbox": null },
+    "right_face": { "bbox": null }
+  },
+
+  "diarization": {
+    "min_segment_sec": 0.40,
+    "merge_gap_sec": 0.20
+  },
+
+  "crop": {
+    "pad_px": 24,
+    "target_size": 512
+  },
+
+  "compositing": {
+    "method": "alpha_feather",
+    "feather_px": 18
+  },
+
+  "quality": {
+    "use_gfpgan": true
+  }
+}
