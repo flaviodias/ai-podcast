@@ -24,8 +24,8 @@
   },
 
   "faces": {
-    "left_face": { "bbox": null },
-    "right_face": { "bbox": null }
+    "left_face":  { "bbox": [751, 238, 1343, 950] },
+    "right_face": { "bbox": [1471, 331, 2028, 964] }
   },
 
   "diarization": {
@@ -34,7 +34,7 @@
   },
 
   "crop": {
-    "pad_px": 24,
+    "pad_px": 16,
     "target_size": 512
   },
 

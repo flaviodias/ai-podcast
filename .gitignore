@@ -3,7 +3,7 @@
 # Objetivo: manter o repositório leve e reproduzível,
 # evitando subir artefatos gerados, caches e arquivos grandes.
 # ============================================================
-
+src/*.egg-info/
 
 # ------------------------------------------------------------
 # Python: bytecode, caches e artefatos locais de execução
